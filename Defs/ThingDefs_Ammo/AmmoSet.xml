@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LasWeapons</defName>
+    <label>IG energy pack</label>
+    <ammoTypes>
+      <Ammo_LasWeapon_Common>Bullet_Lasweapon_Common</Ammo_LasWeapon_Common>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+</Defs>
