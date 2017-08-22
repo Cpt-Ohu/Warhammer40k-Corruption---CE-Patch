@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+ <defName>IGAmmoEnergy</defName>
+ <label>Imperial energy packs</label>
+ <parent>IoMGear</parent>
+</ThingCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>LaserWeaponry</defName>
+    <label>Laser Weaponry</label>
+    <description>Extremely condensed streams of high energy electromagnetic waves, with exploding power on impact.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LasWeapons</defName>
+    <label>IG energy pack</label>
+    <ammoTypes>
+      <Ammo_LasWeapon_Common>Bullet_Lasround</Ammo_LasWeapon_Common>
+      <Ammo_LasWeapon_HotShot>Bullet_LasroundHotshot</Ammo_LasWeapon_HotShot>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <ThingDef Name="AmmoLasWeaponBase" Abstract="True">
+    <description>A cartridge packed with energy cells that can be used to create laser projectiles.</description>
+    <statBases>
+    <Mass>0.12</Mass>
+    <Bulk>0.16</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>IGAmmoEnergy</li>
+    </thingCategories>
+    <stackLimit>50</stackLimit>
+  </ThingDef>
+
+  <ThingDef ParentName="AmmoLasWeaponBase">
+    <defName>Ammo_LasWeapon_Common</defName>
+    <label>imperial energy pack</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.42</MarketValue>
+    </statBases>
+    <ammoClass>LaserWeaponry</ammoClass>
+    <cookOffProjectile>Bullet_Lasround</cookOffProjectile>
+  </ThingDef>
+
+  <ThingDef ParentName="AmmoLasWeaponBase">
+    <defName>Ammo_LasWeapon_Common</defName>
+    <label>imperial energy pack</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.42</MarketValue>
+    </statBases>
+    <ammoClass>LaserWeaponry</ammoClass>
+    <cookOffProjectile>Bullet_LasroundHotshot</cookOffProjectile>
+    <stackLimit>25</stackLimit>
+  </ThingDef>
+
+</Defs>
