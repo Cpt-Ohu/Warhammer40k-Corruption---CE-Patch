@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+ <defName>DarkEldarAmmo</defName>
+ <label>Dark Eldar ammo</label>
+ <parent>DarkEldar</parent>
+</ThingCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>SplinterWeaponry</defName>
+    <label>Splinter Weaponry</label>
+    <description>Monomolecular discs of a potent solid poison fired from a weapon by gravitic pulses.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>DarklightWeaponry</defName>
+    <label>Darklight Weaponry</label>
+    <description>Beams of anti-matter, able to rip through any armor.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Splinter</defName>
+    <label>splinter</label>
+    <ammoTypes>
+      <Ammo_Splinter>Bullet_Splinter</Ammo_Splinter>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Darklight</defName>
+    <label>darklight</label>
+    <ammoTypes>
+      <Ammo_Darklight>Bullet_Darklight</Ammo_Darklight>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <ThingDef>
+    <defName>Ammo_Splinter</defName>
+    <label>splinter</label>
+    <description>A cartridge packed with a crystalline poison block for Dark Eldar splinter weapons.</description>
+    <graphicData>
+      <texPath>Things/DarkEldar/Splinter/Splinter</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+    <Mass>0.05</Mass>
+    <Bulk>0.1</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>DarkEldarAmmo</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>Ammo_Darklight</defName>
+    <label>Darklight</label>
+    <description>An unstable core of dark matter encased in wraithbone.</description>
+    <graphicData>
+      <texPath>Things/DarkEldar/Darklight/Darklight</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+    <Mass>0.05</Mass>
+    <Bulk>0.1</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>DarkEldarAmmo</li>
+    </thingCategories>
+    <stackLimit>20</stackLimit>
+  </ThingDef>
+
+
+</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="LasWeaponAmmoBase" ParentName="SmallAmmoBase" Abstract="True">
+    <description>An energy pack for loading into a lasweapon. Common, but still effective.</description>
+    <statBases>
+      <Mass>0.12</Mass>
+      <Bulk>0.16</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>Ammo50BMG</li>
+    </thingCategories>
+    <stackLimit>200</stackLimit>
+  </ThingDef>
+</Defs>

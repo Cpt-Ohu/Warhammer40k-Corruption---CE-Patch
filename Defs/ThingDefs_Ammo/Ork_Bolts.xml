@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+ <defName>OrkAmmo</defName>
+ <label>Ork ammo</label>
+ <parent>OrkGear</parent>
+</ThingCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>DakkaWeaponry</defName>
+    <label>Dakka Weaponry</label>
+    <description>A heap of metal rods that roughly resemble ammunition.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Dakka</defName>
+    <label>dakka</label>
+    <ammoTypes>
+      <Ammo_Dakka>Bullet_Dakka</Ammo_Dakka>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <ThingDef>
+    <defName>Ammo_Dakka</defName>
+    <label>ork ammunition</label>
+    <description>A belt packed with makeshift ammunition, either looted or hurriedly cobbled together by the Orkish Horde.</description>
+    <graphicData>
+      <texPath>Things/Orks/Dakka/Dakka</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+    <Mass>0.05</Mass>
+    <Bulk>0.1</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>OrkAmmo</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+</Defs>

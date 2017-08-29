@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+ <defName>MechanicumAmmo</defName>
+ <label>Mechanicus Ammunition</label>
+ <parent>IoM_Mechanicum</parent>
+</ThingCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>Mec_</defName>
+    <label>Bolt Weaponry</label>
+    <description>Projectiles resembling miniature rockets. They combine high armor penetration with explosive damage.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_MechanicusAmmo</defName>
+    <label>mechanicus ammo</label>
+    <ammoTypes>
+      <Ammo_Mechanicus_Common>Bullet_SniperRifle</Ammo_Mechanicus_Common>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_MechanicusArc</defName>
+    <label>mechanicus ammo</label>
+    <ammoTypes>
+      <Ammo_Mechanicus_Arc>Bullet_Arc</Ammo_Mechanicus_Arc>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <ThingDef>
+    <defName>Ammo_Mechanicus_Common</defName>
+    <label>mechanicus uranium ammunition</label>
+    <description>A cartridge containing bullets out of uranium and rare alloys.</description>
+    <graphicData>
+      <texPath>Things/Mechanicus/Ammo/Uranium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+    <Mass>0.05</Mass>
+    <Bulk>0.1</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>OrkAmmo</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>Ammo_Mechanicus_Arc</defName>
+    <label>mechanicus arc ammunition</label>
+    <description>A cartridge containing dense energy cells used for arc weapons.</description>
+    <graphicData>
+      <texPath>Things/Mechanicus/Ammo/Arc</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+    <Mass>0.05</Mass>
+    <Bulk>0.1</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>OrkAmmo</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+
+</Defs>

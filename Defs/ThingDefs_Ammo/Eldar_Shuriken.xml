@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+ <defName>EldarAmmo</defName>
+ <label>Eldar ammo</label>
+ <parent>EldarGear</parent>
+</ThingCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>ShurikenWeaponry</defName>
+    <label>Shuriken Weaponry</label>
+    <description>Monomolecular discs of plasti-crystal fired from a weapon by gravitic pulses.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Shuriken</defName>
+    <label>shuriken</label>
+    <ammoTypes>
+      <Ammo_Shuriken_Common>Bullet_Shuriken</Ammo_Shuriken_Common>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <ThingDef>
+    <defName>Ammo_Shuriken_Common</defName>
+    <label>shuriken crystal</label>
+    <description>A cartridge packed with energy cells that can be used to create laser projectiles.</description>
+    <graphicData>
+      <texPath>Things/Eldar/Shuriken/Shuriken</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+    <Mass>0.05</Mass>
+    <Bulk>0.1</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>EldarAmmo</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+</Defs>

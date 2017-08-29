@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+ <defName>Tau</defName>
+ <label>Tau ammo</label>
+ <parent>TauGear</parent>
+</ThingCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>TauWeaponry</defName>
+    <label>Tau Weaponry</label>
+    <description>A set of highly advanced hydrogen containers used by the Tau to fuel their plasma weapons.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Tau_Plasma</defName>
+    <label>dakka</label>
+    <ammoTypes>
+      <Ammo_Tau_Plasma>Bullet_PulseRifle</Ammo_Tau_Plasma>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <ThingDef>
+    <defName>Ammo_Tau_Plasma</defName>
+    <label>tau energy pack</label>
+    <description>A cartridge of hydrogen used to fuel a small plasma generator.</description>
+    <graphicData>
+      <texPath>Things/Tau/Plasma/Plasma</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+    <Mass>0.05</Mass>
+    <Bulk>0.1</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>OrkAmmo</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+</Defs>

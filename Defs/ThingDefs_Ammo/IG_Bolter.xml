@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+ <defName>IGAmmoBolter</defName>
+ <label>Imperial bolter rounds</label>
+ <parent>IoMGear</parent>
+</ThingCategoryDef>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>IGBolterRounds</defName>
+    <label>Bolt Weaponry</label>
+    <description>Projectiles resembling miniature rockets. They combine high armor penetration with explosive damage.</description>
+	<advanced>true</advanced>
+  </CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_BolterWeapons</defName>
+    <label>IG bolt rounds</label>
+    <ammoTypes>
+      <Ammo_IGBolter_Common>Bullet_StandardBolt</Ammo_IGBolter_Common>
+      <Ammo_IGBolter_Hellfire>Bullet_Bolt_Hellfire</Ammo_IGBolter_Hellfire>
+      <Ammo_IGBolter_Kraken>Bullet_Bolt_Kraken</Ammo_IGBolter_Kraken>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
+  <ThingDef Name="AmmoBolterBase" Abstract="True">
+    <description>A cartridge packed with energy cells that can be used to create laser projectiles.</description>
+    <statBases>
+    <Mass>0.12</Mass>
+    <Bulk>0.16</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>IGAmmoBolter</li>
+    </thingCategories>
+    <stackLimit>50</stackLimit>
+  </ThingDef>
+
+  <ThingDef ParentName="AmmoBolterBase">
+    <defName>Ammo_IGBolter_Common</defName>
+    <label>.75 standard  bolt</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>IGBolterRounds</ammoClass>
+    <cookOffProjectile>Bullet_Bolt_Standard</cookOffProjectile>
+  </ThingDef>
+
+  <ThingDef ParentName="AmmoBolterBase">
+    <defName>Ammo_IGBolter_Hellfire</defName>
+    <label>.75 hellfire bolt</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>IGBolterRounds</ammoClass>
+    <cookOffProjectile>Bullet_Bolt_Hellfire</cookOffProjectile>
+  </ThingDef>
+
+  <ThingDef ParentName="AmmoBolterBase">
+    <defName>Ammo_IGBolter_Kraken</defName>
+    <label>.75 kraken bolt</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>IGBolterRounds</ammoClass>
+    <cookOffProjectile>Bullet_Bolt_Kraken</cookOffProjectile>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="Bullet_StandardBolt">
+    <defName>Bullet_StandardBolt</defName>
+    <label>.75 cal Bolt</label>
+	<graphicData>
+		<texPath>Things/Projectile/Bullet_Big</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>BulletBolter</damageDef>
+		<damageAmountBase>26</damageAmountBase>
+	 	<explosionRadius>1.0</explosionRadius>
+		<speed>80</speed>
+    </projectile>
+  </ThingDef>
+
+
+
+</Defs>
